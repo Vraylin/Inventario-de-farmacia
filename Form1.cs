@@ -39,6 +39,7 @@ namespace Inventario_de_farmacia
         private void BtnGerente_Click(object sender, EventArgs e)
         {
             Ventana_Gerente.Visible = true;
+            Console.WriteLine("Practicamente este seria el cambio, solo es prueba");
         }
 
     }
