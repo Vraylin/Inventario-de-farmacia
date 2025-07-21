@@ -42,5 +42,9 @@ namespace Inventario_de_farmacia
             Console.WriteLine("Practicamente este seria el cambio, solo es prueba");
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
