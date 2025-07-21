@@ -52,6 +52,7 @@
     <Compile Include="Caja.Designer.cs">
       <DependentUpon>Caja.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess\ProductoRepository.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

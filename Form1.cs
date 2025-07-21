@@ -29,15 +29,23 @@ namespace Inventario_de_farmacia
         {
         
             Ventana_Caja.Visible = true;
+            Ventana_productos.Visible = false;
+            Ventana_Gerente.Visible = false;
         }
 
         private void BtnProductos_Click(object sender, EventArgs e)
         {
             Ventana_productos.Visible = true;
+            Ventana_Caja.Visible = false;
+            Ventana_Gerente.Visible = false;
         }
+
+
 
         private void BtnGerente_Click(object sender, EventArgs e)
         {
+            Ventana_productos.Visible = false;
+            Ventana_Caja.Visible = false;
             Ventana_Gerente.Visible = true;
             Console.WriteLine("Practicamente este seria el cambio, solo es prueba");
         }
