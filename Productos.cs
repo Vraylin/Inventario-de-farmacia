@@ -19,7 +19,9 @@ namespace Inventario_de_farmacia
 
         private void Productos_Load(object sender, EventArgs e)
         {
-
+            this.FormClosing += new FormClosingEventHandler(Cerrar);
+            this.Visible = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Cerrar(object sender, FormClosingEventArgs e)
