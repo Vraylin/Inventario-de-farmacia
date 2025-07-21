@@ -43,7 +43,7 @@
             this.BtnCaja = new System.Windows.Forms.Button();
             this.BtnProductos = new System.Windows.Forms.Button();
             this.BtnGerente = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Boton_prueba = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -169,15 +169,15 @@
             this.BtnGerente.UseVisualStyleBackColor = true;
             this.BtnGerente.Click += new System.EventHandler(this.BtnGerente_Click);
             // 
-            // button1
+            // Boton_prueba
             // 
-            this.button1.Location = new System.Drawing.Point(466, 104);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Boton_prueba.Location = new System.Drawing.Point(466, 104);
+            this.Boton_prueba.Name = "Boton_prueba";
+            this.Boton_prueba.Size = new System.Drawing.Size(75, 23);
+            this.Boton_prueba.TabIndex = 4;
+            this.Boton_prueba.Text = "Prueba";
+            this.Boton_prueba.UseVisualStyleBackColor = true;
+            this.Boton_prueba.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -185,7 +185,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(1200, 658);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Boton_prueba);
             this.Controls.Add(this.BtnGerente);
             this.Controls.Add(this.BtnProductos);
             this.Controls.Add(this.BtnCaja);
@@ -219,7 +219,7 @@
         private System.Windows.Forms.Button BtnCaja;
         private System.Windows.Forms.Button BtnProductos;
         private System.Windows.Forms.Button BtnGerente;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Boton_prueba;
     }
 }
 
