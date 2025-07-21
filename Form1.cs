@@ -28,9 +28,7 @@ namespace Inventario_de_farmacia
         private void BtnCaja_Click(object sender, EventArgs e)
         {
         
-            Ventana_Caja.Visible = true;
-            Ventana_productos.Visible = false;
-            Ventana_Gerente.Visible = false;
+            
         }
 
         private void BtnProductos_Click(object sender, EventArgs e)
@@ -44,10 +42,7 @@ namespace Inventario_de_farmacia
 
         private void BtnGerente_Click(object sender, EventArgs e)
         {
-            Ventana_productos.Visible = false;
-            Ventana_Caja.Visible = false;
-            Ventana_Gerente.Visible = true;
-            Console.WriteLine("Practicamente este seria el cambio, solo es prueba");
+        
         }
 
         private void button1_Click(object sender, EventArgs e)
