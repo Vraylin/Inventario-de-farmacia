@@ -32,12 +32,13 @@
             // 
             // Productos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 311);
+            this.ClientSize = new System.Drawing.Size(594, 346);
+            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Productos";
             this.Text = "Productos";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Cerrar);
             this.Load += new System.EventHandler(this.Productos_Load);
             this.ResumeLayout(false);
 

@@ -1,6 +1,6 @@
 ﻿namespace Inventario_de_farmacia
 {
-    partial class Gerente
+    partial class LoginF
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // Gerente
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 330);
-            this.Name = "Gerente";
-            this.Text = "Gerente";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Cerrar);
-            this.Load += new System.EventHandler(this.Gerente_Load);
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "LoginF";
         }
 
         #endregion

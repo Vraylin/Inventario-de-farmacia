@@ -17,6 +17,8 @@ namespace Inventario_de_farmacia
             InitializeComponent();
         }
 
+        public static object TabPages { get; internal set; }
+
         private void Cerrar(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
