@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Inventario_de_farmacia
 {
@@ -18,6 +19,7 @@ namespace Inventario_de_farmacia
         public Form1()
         {
             InitializeComponent();
+        
         }
 
         private void pagoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -27,8 +29,17 @@ namespace Inventario_de_farmacia
 
         private void BtnCaja_Click(object sender, EventArgs e)
         {
-        
-            Ventana_Caja.Visible = true;
+
+     
+
+
+            var login = new Inicio_sesion("Caja");
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                var FmCaja = new Caja();
+                FmCaja.Show();
+            }
+
         }
 
         private void BtnProductos_Click(object sender, EventArgs e)
@@ -38,13 +49,25 @@ namespace Inventario_de_farmacia
 
         private void BtnGerente_Click(object sender, EventArgs e)
         {
-            Ventana_Gerente.Visible = true;
-            Console.WriteLine("Practicamente este seria el cambio, solo es prueba");
+
+            var login = new Inicio_sesion("Gerente");
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                
+                var FmGerente=new Gerente();
+                FmGerente.Show();
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

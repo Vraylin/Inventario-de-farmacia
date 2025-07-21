@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Inventario_de_farmacia
 {
-    public partial class Productos : Form
+    public partial class LoginF : Form
     {
-        public Productos()
+        public LoginF()
         {
             InitializeComponent();
-        }
-
-        private void Productos_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
