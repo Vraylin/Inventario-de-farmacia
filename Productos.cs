@@ -19,6 +19,8 @@ namespace Inventario_de_farmacia
 
         private void Productos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'farmacia2DataSet.PRODUCTOS' Puede moverla o quitarla según sea necesario.
+            this.pRODUCTOSTableAdapter.Fill(this.farmacia2DataSet.PRODUCTOS);
             this.FormClosing += new FormClosingEventHandler(Cerrar);
             this.Visible = false;
             this.StartPosition = FormStartPosition.CenterScreen;
