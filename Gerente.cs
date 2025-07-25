@@ -25,6 +25,32 @@ namespace Inventario_de_farmacia
 
         private void Gerente_Load(object sender, EventArgs e)
         {
+            this.cAJATableAdapter.Fill(this.fARMACIA1DataSet2.CAJA);
+
+        }
+
+        private void ArchivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AyudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GestiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1Compra_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

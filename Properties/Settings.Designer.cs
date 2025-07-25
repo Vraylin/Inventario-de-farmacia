@@ -33,5 +33,16 @@ namespace Inventario_de_farmacia.Properties {
                 return ((string)(this["Farmacia2ConnectionProductos"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-KIP8R4H\\SQLEXPRESS01;Initial Catalog=FARMACIA1;Integrated Sec" +
+            "urity=True;TrustServerCertificate=True")]
+        public string FARMACIA1ConnectionString {
+            get {
+                return ((string)(this["FARMACIA1ConnectionString"]));
+            }
+        }
     }
 }
