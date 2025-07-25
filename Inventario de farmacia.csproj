@@ -54,6 +54,12 @@
       <DependentUpon>Caja.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\ProductoRepository.cs" />
+    <Compile Include="datos_para_gurdar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datos_para_gurdar.Designer.cs">
+      <DependentUpon>datos_para_gurdar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FARMACIA1DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +86,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FARMACIA1DataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FARMACIA1DataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FARMACIA1DataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FARMACIA1DataSet141.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FARMACIA1DataSet141.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FARMACIA1DataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FARMACIA1DataSet15.xsd</DependentUpon>
     </Compile>
     <Compile Include="FARMACIA1DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -149,6 +170,9 @@
     </Compile>
     <EmbeddedResource Include="Caja.resx">
       <DependentUpon>Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datos_para_gurdar.resx">
+      <DependentUpon>datos_para_gurdar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -225,6 +249,39 @@
     </None>
     <None Include="FARMACIA1DataSet13.xss">
       <DependentUpon>FARMACIA1DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet14.xsc">
+      <DependentUpon>FARMACIA1DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet14.xss">
+      <DependentUpon>FARMACIA1DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet141.xsc">
+      <DependentUpon>FARMACIA1DataSet141.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet141.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet141.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet141.xss">
+      <DependentUpon>FARMACIA1DataSet141.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet15.xsc">
+      <DependentUpon>FARMACIA1DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet15.xss">
+      <DependentUpon>FARMACIA1DataSet15.xsd</DependentUpon>
     </None>
     <None Include="FARMACIA1DataSet2.xsc">
       <DependentUpon>FARMACIA1DataSet2.xsd</DependentUpon>

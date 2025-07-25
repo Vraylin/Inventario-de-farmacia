@@ -2,15 +2,8 @@
 {
     partial class Productos
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,16 +15,12 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.fARMACIA1DataSet = new Inventario_de_farmacia.FARMACIA1DataSet1();
-            this.pRODUCTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRODUCTOSTableAdapter = new Inventario_de_farmacia.FARMACIA1DataSet1TableAdapters.PRODUCTOSTableAdapter();
+            this.fARMACIA1DataSet1 = new Inventario_de_farmacia.FARMACIA1DataSet1();
+            this.pRODUCTOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pRODUCTOSTableAdapter1 = new Inventario_de_farmacia.FARMACIA1DataSet1TableAdapters.PRODUCTOSTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iDPRODUCTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMBREPRODUCTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,29 +30,24 @@
             this.uNIDADMEDIDADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRECIOMAYORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRECIODETALLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRODUCTOSBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.fARMACIA1DataSet1 = new Inventario_de_farmacia.FARMACIA1DataSet1();
-            this.pRODUCTOSTableAdapter1 = new Inventario_de_farmacia.FARMACIA1DataSet1TableAdapters.PRODUCTOSTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // fARMACIA1DataSet
+            // fARMACIA1DataSet1
             // 
-            this.fARMACIA1DataSet.DataSetName = "FARMACIA1DataSet";
-            this.fARMACIA1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.fARMACIA1DataSet1.DataSetName = "FARMACIA1DataSet1";
+            this.fARMACIA1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pRODUCTOSBindingSource
+            // pRODUCTOSBindingSource1
             // 
-            this.pRODUCTOSBindingSource.DataMember = "PRODUCTOS";
-            this.pRODUCTOSBindingSource.DataSource = this.fARMACIA1DataSet;
+            this.pRODUCTOSBindingSource1.DataMember = "PRODUCTOS";
+            this.pRODUCTOSBindingSource1.DataSource = this.fARMACIA1DataSet1;
             // 
-            // pRODUCTOSTableAdapter
+            // pRODUCTOSTableAdapter1
             // 
-            this.pRODUCTOSTableAdapter.ClearBeforeFill = true;
+            this.pRODUCTOSTableAdapter1.ClearBeforeFill = true;
             // 
             // dataGridView1
             // 
@@ -89,7 +73,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1061, 691);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // iDPRODUCTODataGridViewTextBoxColumn
             // 
@@ -163,20 +146,6 @@
             this.pRECIODETALLEDataGridViewTextBoxColumn.ReadOnly = true;
             this.pRECIODETALLEDataGridViewTextBoxColumn.Width = 125;
             // 
-            // pRODUCTOSBindingSource1
-            // 
-            this.pRODUCTOSBindingSource1.DataMember = "PRODUCTOS";
-            this.pRODUCTOSBindingSource1.DataSource = this.fARMACIA1DataSet1;
-            // 
-            // fARMACIA1DataSet1
-            // 
-            this.fARMACIA1DataSet1.DataSetName = "FARMACIA1DataSet1";
-            this.fARMACIA1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pRODUCTOSTableAdapter1
-            // 
-            this.pRODUCTOSTableAdapter1.ClearBeforeFill = true;
-            // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -189,23 +158,17 @@
             this.Text = "Productos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Cerrar);
             this.Load += new System.EventHandler(this.Productos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOSBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        // Nuevas declaraciones de objetos para el FARMACIA1DataSet
-        private FARMACIA1DataSet1 fARMACIA1DataSet; // Asegúrate de que esta línea esté declarada
-        private System.Windows.Forms.BindingSource pRODUCTOSBindingSource;
-        private FARMACIA1DataSet1TableAdapters.PRODUCTOSTableAdapter pRODUCTOSTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private FARMACIA1DataSet1 fARMACIA1DataSet1;
         private System.Windows.Forms.BindingSource pRODUCTOSBindingSource1;
         private FARMACIA1DataSet1TableAdapters.PRODUCTOSTableAdapter pRODUCTOSTableAdapter1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDPRODUCTODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nOMBREPRODUCTODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pRECIODataGridViewTextBoxColumn;
@@ -217,4 +180,3 @@
     }
 }
         #endregion
-  
