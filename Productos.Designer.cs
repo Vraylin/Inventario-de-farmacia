@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.fARMACIA1DataSet = new Inventario_de_farmacia.FARMACIA1DataSet();
+            this.fARMACIA1DataSet = new Inventario_de_farmacia.FARMACIA1DataSet1();
             this.pRODUCTOSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRODUCTOSTableAdapter = new Inventario_de_farmacia.FARMACIA1DataSetTableAdapters.PRODUCTOSTableAdapter();
+            this.pRODUCTOSTableAdapter = new Inventario_de_farmacia.FARMACIA1DataSet1TableAdapters.PRODUCTOSTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iDPRODUCTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMBREPRODUCTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,6 +89,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1061, 691);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // iDPRODUCTODataGridViewTextBoxColumn
             // 
@@ -198,9 +199,9 @@
         }
 
         // Nuevas declaraciones de objetos para el FARMACIA1DataSet
-        private FARMACIA1DataSet fARMACIA1DataSet; // Asegúrate de que esta línea esté declarada
+        private FARMACIA1DataSet1 fARMACIA1DataSet; // Asegúrate de que esta línea esté declarada
         private System.Windows.Forms.BindingSource pRODUCTOSBindingSource;
-        private FARMACIA1DataSetTableAdapters.PRODUCTOSTableAdapter pRODUCTOSTableAdapter;
+        private FARMACIA1DataSet1TableAdapters.PRODUCTOSTableAdapter pRODUCTOSTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
         private FARMACIA1DataSet1 fARMACIA1DataSet1;
         private System.Windows.Forms.BindingSource pRODUCTOSBindingSource1;

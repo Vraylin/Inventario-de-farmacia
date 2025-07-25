@@ -12,6 +12,7 @@ namespace Inventario_de_farmacia
 {
     public partial class Gerente : Form
     {
+        Suplidores ventana_Suplidores = new Suplidores();
         public Gerente()
         {
             InitializeComponent();
@@ -50,6 +51,21 @@ namespace Inventario_de_farmacia
         }
 
         private void Button1_Click(object sender, EventArgs e)
+        {
+            ventana_Suplidores.Visible = true;
+        }
+
+        private void suplidoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ventana_Suplidores.Visible = true;
+        }
+
+        private void pagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

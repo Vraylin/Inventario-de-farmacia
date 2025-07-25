@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-using System.Configuration; // Necesitarás añadir esta referencia
+using System.Configuration;
 
 
 namespace Inventario_de_farmacia
@@ -24,6 +24,8 @@ namespace Inventario_de_farmacia
             // Este método ahora carga los datos en el DataGridView cuando se inicia el formulario.
             try
             {
+                this.pRODUCTOSTableAdapter1.Fill(this.fARMACIA1DataSet.PRODUCTOS);
+
                 this.pRODUCTOSTableAdapter1.Fill(this.fARMACIA1DataSet.PRODUCTOS);
             }
             catch (Exception ex)
@@ -137,5 +139,6 @@ namespace Inventario_de_farmacia
                 MessageBox.Show("Ocurrió un error inesperado: " + ex.Message);
             }
         }
+
     }
 }
