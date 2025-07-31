@@ -11,7 +11,6 @@ namespace Inventario_de_farmacia
     public partial class Caja : Form
     {
         // Obtiene la cadena de conexión del archivo App.config
-        // Asegúrate de que el nombre "FarmaciaConnectionString" coincida con el nombre en App.config
         string connectionString = ConfigurationManager.ConnectionStrings["FarmaciaConnectionString"].ConnectionString;
 
         public Caja()
@@ -21,7 +20,6 @@ namespace Inventario_de_farmacia
 
         private void Caja_Load_1(object sender, EventArgs e)
         {
-            // Este método ahora carga los datos en el DataGridView cuando se inicia el formulario.
             try
             {
                 this.pRODUCTOSTableAdapter1.Fill(this.fARMACIA1DataSet.PRODUCTOS);
@@ -36,7 +34,6 @@ namespace Inventario_de_farmacia
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Lógica para llenar el TextBox con el ID del producto al hacer clic en una celda
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
@@ -46,7 +43,6 @@ namespace Inventario_de_farmacia
 
         private void CompraCaja_Click(object sender, EventArgs e)
         {
-            // Valida que los campos no estén vacíos
             if (string.IsNullOrWhiteSpace(textBoxComprar.Text) || string.IsNullOrWhiteSpace(Cantidad_producto.Text))
             {
                 MessageBox.Show("Por favor, ingrese el ID del producto y la cantidad.");
@@ -87,7 +83,7 @@ namespace Inventario_de_farmacia
                     }
                     reader.Close();
 
-                    // Validar si el producto existe y si hay suficiente stock (aunque el trigger también lo hace, es bueno validarlo aquí)
+                    // Validar si el producto existe y si hay suficiente stock (
                     if (precioDetalle == 0)
                     {
                         MessageBox.Show("Producto no encontrado en la base de datos.");
@@ -101,7 +97,6 @@ namespace Inventario_de_farmacia
                     }
 
                     // 2. Insertar una nueva venta en la tabla CAJA
-                    // El trigger `TRG_CAJA_STOCK` se encargará de actualizar el stock automáticamente
                     SqlCommand insertSaleCmd = new SqlCommand(
                         "INSERT INTO CAJA (ID_PRODUCTO, CANTIDAD, PRECIO_UNITARIO, ID_EMPLEADO, ID_CLIENTE) VALUES (@idProducto, @cantidad, @precioUnitario, @idEmpleado, @idCliente)", conn);
 

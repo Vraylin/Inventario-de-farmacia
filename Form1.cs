@@ -6,24 +6,21 @@ namespace Inventario_de_farmacia
     public partial class Form1 : Form
     {
         // --- Declaración de instancias de formularios ---
-        // Se declaran a nivel de clase para mantener una referencia.
-        // Se inicializan a 'null' para saber si ya se han creado o no.
+        
         private Caja _ventanaCaja;
         private Productos _ventanaProductos;
         private Gerente _ventanaGerente;
-        // Para Suplidores y Clientes, si quieres que se abran en una nueva ventana modal
-        // cada vez, no necesitas declararlos aquí.
+   
 
         public Form1()
         {
             InitializeComponent();
-            // Aseguramos que la ventana principal esté maximizada al iniciar
+        
             this.WindowState = FormWindowState.Maximized;
         }
 
         // --- Método Auxiliar para Mostrar un Formulario Contenido ---
-        // Este método centraliza la lógica para mostrar un formulario
-        // y ocultar los demás, evitando repetición de código.
+    
         private void MostrarVentanaContenida(Form ventanaAMostrar)
         {
             // Oculta todas las ventanas "secundarias" gestionadas por Form1
@@ -49,12 +46,10 @@ namespace Inventario_de_farmacia
             }
         }
 
-        // --- Evento de Carga del Formulario Principal ---
-        // Usamos solo un Form1_Load para evitar duplicidad.
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Puedes iniciar mostrando una ventana por defecto, por ejemplo, Caja.
-            // Esto creará la instancia si no existe y la mostrará.
+            this.sP_ListarProductosTableAdapter.Fill(this.fARMACIA1DataSet16.SP_ListarProductos);
             BtnCaja_Click(sender, e);
         }
 
@@ -98,8 +93,6 @@ namespace Inventario_de_farmacia
 
         private void SuplidoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Para Suplidores, abrimos una nueva instancia en un diálogo modal cada vez.
-            // Esto es bueno si es una ventana para una tarea específica que debe completarse antes de seguir.
             using (Suplidores suplidoresForm = new Suplidores())
             {
                 suplidoresForm.ShowDialog();
@@ -108,10 +101,6 @@ namespace Inventario_de_farmacia
 
         private void CajasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Para Cajas, si te refieres a la gestión de cajas, también puedes abrirlo como modal.
-            // Si este 'Cajas' es el mismo que 'Ventana_Caja' que gestionas con botones,
-            // entonces deberías usar la lógica de MostrarVentanaContenida y no ShowDialog.
-            // Asumo que este CajasToolStripMenuItem es para una funcionalidad diferente o una ventana independiente.
             BtnCaja_Click(sender, e); // Reutilizamos el botón BtnCaja_Click para mostrar la ventana de Caja
         }
 
@@ -122,27 +111,18 @@ namespace Inventario_de_farmacia
             BtnProductos_Click(sender, e);
         }
 
-        // --- Métodos de Evento Vacíos (Considera eliminarlos si no los usas) ---
-        // Estos métodos estaban en tu código original y no tenían lógica.
-        // Es una buena práctica eliminarlos si no se van a implementar para mantener el código limpio.
-
+       
         private void PagoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Lógica para "Pago" si la implementas
-        }
+            }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            // Lógica para "Button1" si la implementas
-        }
+            }
 
         private void EmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Lógica para "Empleados" si la implementas
         }
 
-        // Si tienes dos eventos Form1_Load, revisa tu diseñador.
-        // Mantén solo uno que sea el que se asigne al evento Load del formulario.
-        // private void Form1_Load_1(object sender, EventArgs e) { /* ... */ }
-    }
+        }
 }

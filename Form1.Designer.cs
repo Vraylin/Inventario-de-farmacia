@@ -25,20 +25,40 @@
          
             private void InitializeComponent()
             {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gestiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suplidoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cajasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BtnCaja = new System.Windows.Forms.Button();
             this.BtnProductos = new System.Windows.Forms.Button();
             this.BtnGerente = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.fARMACIA1DataSet10 = new Inventario_de_farmacia.FARMACIA1DataSet10();
+            this.fARMACIA1DataSet10BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fARMACIA1DataSet12 = new Inventario_de_farmacia.FARMACIA1DataSet12();
+            this.fARMACIA1DataSet12BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gerenteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fARMACIA1DataSet16 = new Inventario_de_farmacia.FARMACIA1DataSet16();
+            this.sPListarProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sP_ListarProductosTableAdapter = new Inventario_de_farmacia.FARMACIA1DataSet16TableAdapters.SP_ListarProductosTableAdapter();
+            this.iDPRODUCTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOMBREPRODUCTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRECIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTOCKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fECHAVENCIMIENTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uNIDADMEDIDADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet10BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet12BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPListarProductosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -47,11 +67,10 @@
             this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestiónToolStripMenuItem,
-            this.ayudaToolStripMenuItem});
+            this.gestiónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1200, 34);
+            this.menuStrip1.Size = new System.Drawing.Size(679, 34);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "MenuStrip1";
             // 
@@ -59,11 +78,9 @@
             // 
             this.gestiónToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productosToolStripMenuItem,
-            this.empleadosToolStripMenuItem,
             this.suplidoresToolStripMenuItem,
             this.comprasToolStripMenuItem,
-            this.cajasToolStripMenuItem,
-            this.pagoToolStripMenuItem});
+            this.cajasToolStripMenuItem});
             this.gestiónToolStripMenuItem.Name = "gestiónToolStripMenuItem";
             this.gestiónToolStripMenuItem.Size = new System.Drawing.Size(104, 30);
             this.gestiónToolStripMenuItem.Text = "Gestión";
@@ -74,13 +91,6 @@
             this.productosToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.ProductosToolStripMenuItem_Click);
-            // 
-            // empleadosToolStripMenuItem
-            // 
-            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
-            this.empleadosToolStripMenuItem.Text = "Empleados";
-            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.EmpleadosToolStripMenuItem_Click);
             // 
             // suplidoresToolStripMenuItem
             // 
@@ -101,27 +111,6 @@
             this.cajasToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
             this.cajasToolStripMenuItem.Text = "Caja";
             this.cajasToolStripMenuItem.Click += new System.EventHandler(this.CajasToolStripMenuItem_Click);
-            // 
-            // pagoToolStripMenuItem
-            // 
-            this.pagoToolStripMenuItem.Name = "pagoToolStripMenuItem";
-            this.pagoToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
-            this.pagoToolStripMenuItem.Text = "Pagos";
-            this.pagoToolStripMenuItem.Click += new System.EventHandler(this.PagoToolStripMenuItem_Click);
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.acercaDeToolStripMenuItem});
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(91, 30);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // acercaDeToolStripMenuItem
-            // 
-            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(219, 30);
-            this.acercaDeToolStripMenuItem.Text = "Acerca de...";
             // 
             // BtnCaja
             // 
@@ -156,12 +145,128 @@
             this.BtnGerente.UseVisualStyleBackColor = false;
             this.BtnGerente.Click += new System.EventHandler(this.BtnGerente_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDPRODUCTODataGridViewTextBoxColumn,
+            this.nOMBREPRODUCTODataGridViewTextBoxColumn,
+            this.pRECIODataGridViewTextBoxColumn,
+            this.sTOCKDataGridViewTextBoxColumn,
+            this.fECHAVENCIMIENTODataGridViewTextBoxColumn,
+            this.uNIDADMEDIDADataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.sPListarProductosBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(28, 371);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(639, 277);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // fARMACIA1DataSet10
+            // 
+            this.fARMACIA1DataSet10.DataSetName = "FARMACIA1DataSet10";
+            this.fARMACIA1DataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fARMACIA1DataSet10BindingSource
+            // 
+            this.fARMACIA1DataSet10BindingSource.DataSource = this.fARMACIA1DataSet10;
+            this.fARMACIA1DataSet10BindingSource.Position = 0;
+            // 
+            // fARMACIA1DataSet12
+            // 
+            this.fARMACIA1DataSet12.DataSetName = "FARMACIA1DataSet12";
+            this.fARMACIA1DataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fARMACIA1DataSet12BindingSource
+            // 
+            this.fARMACIA1DataSet12BindingSource.DataSource = this.fARMACIA1DataSet12;
+            this.fARMACIA1DataSet12BindingSource.Position = 0;
+            // 
+            // gerenteBindingSource
+            // 
+            this.gerenteBindingSource.DataSource = typeof(Inventario_de_farmacia.Gerente);
+            // 
+            // fARMACIA1DataSet16
+            // 
+            this.fARMACIA1DataSet16.DataSetName = "FARMACIA1DataSet16";
+            this.fARMACIA1DataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sPListarProductosBindingSource
+            // 
+            this.sPListarProductosBindingSource.DataMember = "SP_ListarProductos";
+            this.sPListarProductosBindingSource.DataSource = this.fARMACIA1DataSet16;
+            // 
+            // sP_ListarProductosTableAdapter
+            // 
+            this.sP_ListarProductosTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDPRODUCTODataGridViewTextBoxColumn
+            // 
+            this.iDPRODUCTODataGridViewTextBoxColumn.DataPropertyName = "ID_PRODUCTO";
+            this.iDPRODUCTODataGridViewTextBoxColumn.HeaderText = "ID_PRODUCTO";
+            this.iDPRODUCTODataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDPRODUCTODataGridViewTextBoxColumn.Name = "iDPRODUCTODataGridViewTextBoxColumn";
+            this.iDPRODUCTODataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDPRODUCTODataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nOMBREPRODUCTODataGridViewTextBoxColumn
+            // 
+            this.nOMBREPRODUCTODataGridViewTextBoxColumn.DataPropertyName = "NOMBRE_PRODUCTO";
+            this.nOMBREPRODUCTODataGridViewTextBoxColumn.HeaderText = "NOMBRE_PRODUCTO";
+            this.nOMBREPRODUCTODataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nOMBREPRODUCTODataGridViewTextBoxColumn.Name = "nOMBREPRODUCTODataGridViewTextBoxColumn";
+            this.nOMBREPRODUCTODataGridViewTextBoxColumn.ReadOnly = true;
+            this.nOMBREPRODUCTODataGridViewTextBoxColumn.Width = 125;
+            // 
+            // pRECIODataGridViewTextBoxColumn
+            // 
+            this.pRECIODataGridViewTextBoxColumn.DataPropertyName = "PRECIO";
+            this.pRECIODataGridViewTextBoxColumn.HeaderText = "PRECIO";
+            this.pRECIODataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pRECIODataGridViewTextBoxColumn.Name = "pRECIODataGridViewTextBoxColumn";
+            this.pRECIODataGridViewTextBoxColumn.ReadOnly = true;
+            this.pRECIODataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sTOCKDataGridViewTextBoxColumn
+            // 
+            this.sTOCKDataGridViewTextBoxColumn.DataPropertyName = "STOCK";
+            this.sTOCKDataGridViewTextBoxColumn.HeaderText = "STOCK";
+            this.sTOCKDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sTOCKDataGridViewTextBoxColumn.Name = "sTOCKDataGridViewTextBoxColumn";
+            this.sTOCKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sTOCKDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // fECHAVENCIMIENTODataGridViewTextBoxColumn
+            // 
+            this.fECHAVENCIMIENTODataGridViewTextBoxColumn.DataPropertyName = "FECHA_VENCIMIENTO";
+            this.fECHAVENCIMIENTODataGridViewTextBoxColumn.HeaderText = "FECHA_VENCIMIENTO";
+            this.fECHAVENCIMIENTODataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fECHAVENCIMIENTODataGridViewTextBoxColumn.Name = "fECHAVENCIMIENTODataGridViewTextBoxColumn";
+            this.fECHAVENCIMIENTODataGridViewTextBoxColumn.ReadOnly = true;
+            this.fECHAVENCIMIENTODataGridViewTextBoxColumn.Width = 125;
+            // 
+            // uNIDADMEDIDADataGridViewTextBoxColumn
+            // 
+            this.uNIDADMEDIDADataGridViewTextBoxColumn.DataPropertyName = "UNIDAD_MEDIDA";
+            this.uNIDADMEDIDADataGridViewTextBoxColumn.HeaderText = "UNIDAD_MEDIDA";
+            this.uNIDADMEDIDADataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.uNIDADMEDIDADataGridViewTextBoxColumn.Name = "uNIDADMEDIDADataGridViewTextBoxColumn";
+            this.uNIDADMEDIDADataGridViewTextBoxColumn.ReadOnly = true;
+            this.uNIDADMEDIDADataGridViewTextBoxColumn.Width = 125;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
-            this.ClientSize = new System.Drawing.Size(1200, 658);
+            this.ClientSize = new System.Drawing.Size(679, 658);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BtnGerente);
             this.Controls.Add(this.BtnProductos);
             this.Controls.Add(this.BtnCaja);
@@ -174,6 +279,14 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet10BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet12BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gerenteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fARMACIA1DataSet16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPListarProductosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,16 +297,27 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem gestiónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suplidoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cajasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pagoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.Button BtnCaja;
         private System.Windows.Forms.Button BtnProductos;
         private System.Windows.Forms.Button BtnGerente;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource gerenteBindingSource;
+        private FARMACIA1DataSet10 fARMACIA1DataSet10;
+        private System.Windows.Forms.BindingSource fARMACIA1DataSet10BindingSource;
+        private FARMACIA1DataSet12 fARMACIA1DataSet12;
+        private System.Windows.Forms.BindingSource fARMACIA1DataSet12BindingSource;
+        private FARMACIA1DataSet16 fARMACIA1DataSet16;
+        private System.Windows.Forms.BindingSource sPListarProductosBindingSource;
+        private FARMACIA1DataSet16TableAdapters.SP_ListarProductosTableAdapter sP_ListarProductosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDPRODUCTODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nOMBREPRODUCTODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRECIODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTOCKDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fECHAVENCIMIENTODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn uNIDADMEDIDADataGridViewTextBoxColumn;
     }
 }
 

@@ -26,6 +26,8 @@ namespace Inventario_de_farmacia
 
         private void Gerente_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'fARMACIA1DataSet17.CAJA' Puede moverla o quitarla según sea necesario.
+            this.cAJATableAdapter1.Fill(this.fARMACIA1DataSet17.CAJA);
             this.cAJATableAdapter.Fill(this.fARMACIA1DataSet2.CAJA);
 
         }
@@ -66,6 +68,16 @@ namespace Inventario_de_farmacia
         }
 
         private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

@@ -174,11 +174,7 @@ private bool SuplidorExiste(int idSuplidor)
             return saldo;
         }
 
-        /// <summary>
-        /// Calcula el monto total de la compra basándose en la cantidad y el precio del producto.
-        /// Utiliza PRECIO_MAYOR si está disponible, de lo contrario, usa PRECIO.
-        /// </summary>
-        /// <returns>El monto total de la compra como decimal, o 0m si hay un error o el producto no se encuentra.</returns>
+
         private decimal ObtenerMontoCompra()
         {
             // Intenta convertir la cantidad y el ID del producto.
@@ -244,10 +240,7 @@ private bool SuplidorExiste(int idSuplidor)
             return cantidad * precioUnitario;
         }
 
-        /// <summary>
-        /// Maneja el clic en el botón "Comprar Suplido".
-        /// Realiza validaciones, verifica el saldo y procesa la transacción de compra.
-        /// </summary>
+       
         private void CompraSuplido_Click(object sender, EventArgs e)
         {
             // 1. Validar y obtener el ID del suplidor.
@@ -370,30 +363,22 @@ private bool SuplidorExiste(int idSuplidor)
      
         private void DataGridViewSaldoAdtual_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Este evento está vinculado al DataGridViewSaldoAdtual.
-            // Actualmente no contiene lógica.
+        
         }
 
         private void ListodeProductos1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Este evento está vinculado al DataGridView ListodeProductos.
-            // Se usa ListodeProductos1_CellContentClick, lo cual sugiere que quizás
-            // en algún momento hubo un ListodeProductos sin el '1' y el diseñador
-            // generó un nuevo nombre. Es importante que el vínculo en Designer.cs
-            // apunte correctamente a este método.
+           
         }
 
         private void DataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Este método parece ser un remanente o no está directamente vinculado a un control
-            // en tu Designer.cs compartido. Lo mantengo vacío para no eliminar objetos.
+         
         }
 
         private void ListodeProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Similar al caso anterior, este método existe, pero el diseñador parece
-            // usar ListodeProductos1_CellContentClick para el DataGridView 'ListodeProductos'.
-            // Lo mantengo vacío para no causar problemas con el diseñador.
+          
         }
 
      
@@ -422,7 +407,6 @@ private bool SuplidorExiste(int idSuplidor)
         }
         private void label1_Click(object sender, EventArgs e)
         {
-            // Puedes dejarlo vacío si no necesitas funcionalidad específica
         }
     }
 }
