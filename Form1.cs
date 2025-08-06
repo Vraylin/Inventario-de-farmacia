@@ -153,10 +153,7 @@ namespace Inventario_de_farmacia
         // Mantén solo uno que sea el que se asigne al evento Load del formulario.
         // private void Form1_Load_1(object sender, EventArgs e) { /* ... */ }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
+      
 
     }
 }
