@@ -226,6 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1043, 402);
             this.Controls.Add(this.Label1Compra);
@@ -235,6 +236,9 @@
             this.Controls.Add(this.G_Compra_Suplidores);
             this.Controls.Add(this.menuStrip1);
             this.Margin = new System.Windows.Forms.Padding(4);
+
+            this.ClientSize = new System.Drawing.Size(608, 330);
+
             this.Name = "Gerente";
             this.Text = "Gerente";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Cerrar);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Inventario_de_farmacia
 {
@@ -17,8 +18,10 @@ namespace Inventario_de_farmacia
         public Form1()
         {
             InitializeComponent();
+
             // Aseguramos que la ventana principal esté maximizada al iniciar
             this.WindowState = FormWindowState.Maximized;
+
         }
 
         // --- Método Auxiliar para Mostrar un Formulario Contenido ---
@@ -62,6 +65,7 @@ namespace Inventario_de_farmacia
 
         private void BtnCaja_Click(object sender, EventArgs e)
         {
+
             // Si la instancia de _ventanaCaja no existe o ya se cerró, créala de nuevo.
             if (_ventanaCaja == null || _ventanaCaja.IsDisposed)
             {
@@ -70,6 +74,7 @@ namespace Inventario_de_farmacia
                 // _ventanaCaja.MdiParent = this; // Descomentar si Form1.IsMdiContainer = true
             }
             MostrarVentanaContenida(_ventanaCaja);
+
         }
 
         private void BtnProductos_Click(object sender, EventArgs e)
@@ -85,6 +90,7 @@ namespace Inventario_de_farmacia
 
         private void BtnGerente_Click(object sender, EventArgs e)
         {
+
             // Si la instancia de _ventanaGerente no existe o ya se cerró, créala de nuevo.
             if (_ventanaGerente == null || _ventanaGerente.IsDisposed)
             {
@@ -113,6 +119,7 @@ namespace Inventario_de_farmacia
             // entonces deberías usar la lógica de MostrarVentanaContenida y no ShowDialog.
             // Asumo que este CajasToolStripMenuItem es para una funcionalidad diferente o una ventana independiente.
             BtnCaja_Click(sender, e); // Reutilizamos el botón BtnCaja_Click para mostrar la ventana de Caja
+
         }
 
         private void ProductosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -131,6 +138,7 @@ namespace Inventario_de_farmacia
             // Lógica para "Pago" si la implementas
         }
 
+
         private void Button1_Click(object sender, EventArgs e)
         {
             // Lógica para "Button1" si la implementas
@@ -144,5 +152,11 @@ namespace Inventario_de_farmacia
         // Si tienes dos eventos Form1_Load, revisa tu diseñador.
         // Mantén solo uno que sea el que se asigne al evento Load del formulario.
         // private void Form1_Load_1(object sender, EventArgs e) { /* ... */ }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }
