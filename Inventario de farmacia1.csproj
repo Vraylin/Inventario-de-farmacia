@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14F8FD0F-EF39-47F5-89EA-B0B17A3977D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Inventario_de_farmacia</RootNamespace>
+    <AssemblyName>Inventario de farmacia</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja.Designer.cs">
+      <DependentUpon>Caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FARMACIA1DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FARMACIA1DataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerente.Designer.cs">
+      <DependentUpon>Gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio_sesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio_sesion.Designer.cs">
+      <DependentUpon>Inicio_sesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos.Designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuarios.cs" />
+    <EmbeddedResource Include="Caja.resx">
+      <DependentUpon>Caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente.resx">
+      <DependentUpon>Gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio_sesion.resx">
+      <DependentUpon>Inicio_sesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos.resx">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Suplidores.resx">
+      <DependentUpon>Suplidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="FARMACIA1DataSet1.xsc">
+      <DependentUpon>FARMACIA1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet1.xss">
+      <DependentUpon>FARMACIA1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet10.xsc">
+      <DependentUpon>FARMACIA1DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet101.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet10.xss">
+      <DependentUpon>FARMACIA1DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet11.xsc">
+      <DependentUpon>FARMACIA1DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet111.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet11.xss">
+      <DependentUpon>FARMACIA1DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet12.xsc">
+      <DependentUpon>FARMACIA1DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet121.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet12.xss">
+      <DependentUpon>FARMACIA1DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet13.xsc">
+      <DependentUpon>FARMACIA1DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet13.xss">
+      <DependentUpon>FARMACIA1DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet14.xsc">
+      <DependentUpon>FARMACIA1DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet14.xss">
+      <DependentUpon>FARMACIA1DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet141.xsc">
+      <DependentUpon>FARMACIA1DataSet141.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet141.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet141.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet141.xss">
+      <DependentUpon>FARMACIA1DataSet141.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet15.xsc">
+      <DependentUpon>FARMACIA1DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet15.xss">
+      <DependentUpon>FARMACIA1DataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet161.xsc">
+      <DependentUpon>FARMACIA1DataSet161.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet161.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet161.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet161.xss">
+      <DependentUpon>FARMACIA1DataSet161.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet17.xsc">
+      <DependentUpon>FARMACIA1DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet17.xss">
+      <DependentUpon>FARMACIA1DataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet2.xsc">
+      <DependentUpon>FARMACIA1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet2.xss">
+      <DependentUpon>FARMACIA1DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet3.xsc">
+      <DependentUpon>FARMACIA1DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet3.xss">
+      <DependentUpon>FARMACIA1DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet4.xsc">
+      <DependentUpon>FARMACIA1DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet4.xss">
+      <DependentUpon>FARMACIA1DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet5.xsc">
+      <DependentUpon>FARMACIA1DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet5.xss">
+      <DependentUpon>FARMACIA1DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet6.xsc">
+      <DependentUpon>FARMACIA1DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet6.xss">
+      <DependentUpon>FARMACIA1DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet7.xsc">
+      <DependentUpon>FARMACIA1DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet7.xss">
+      <DependentUpon>FARMACIA1DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet8.xsc">
+      <DependentUpon>FARMACIA1DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet8.xss">
+      <DependentUpon>FARMACIA1DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet9.xsc">
+      <DependentUpon>FARMACIA1DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="FARMACIA1DataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FARMACIA1DataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FARMACIA1DataSet9.xss">
+      <DependentUpon>FARMACIA1DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\FARMACIA1DataSet.CAJADataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.CAJARow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.CAJARowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.CAJARowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.CLIENTESDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.CLIENTESRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.CLIENTESRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.CLIENTESRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.COMPRAS_SUPLIDORESDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.COMPRAS_SUPLIDORESRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.COMPRAS_SUPLIDORESRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.COMPRAS_SUPLIDORESRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.EMPLEADOSDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.EMPLEADOSRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.EMPLEADOSRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.EMPLEADOSRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.GERENTEDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.GERENTERow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.GERENTERowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.GERENTERowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.PAGOS_VENTASDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.PAGOS_VENTASRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.PAGOS_VENTASRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.PAGOS_VENTASRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.PRODUCTOSDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.PRODUCTOSRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.PRODUCTOSRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.PRODUCTOSRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SALDO_FARMACIADataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SALDO_FARMACIARow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SALDO_FARMACIARowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SALDO_FARMACIARowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SP_ListarProductosDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SP_ListarProductosRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SP_ListarProductosRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SP_ListarProductosRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SP_ObtenerSaldoFarmaciaDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SP_ObtenerSaldoFarmaciaRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SP_ObtenerSaldoFarmaciaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SP_ObtenerSaldoFarmaciaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SP_VerMovimientoDinero_BalanceNetoDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SP_VerMovimientoDinero_BalanceNetoRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SP_VerMovimientoDinero_BalanceNetoRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SP_VerMovimientoDinero_BalanceNetoRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SUPLIDORESDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SUPLIDORESRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SUPLIDORESRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.SUPLIDORESRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.TIPOS_PAGODataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.TIPOS_PAGORow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.TIPOS_PAGORowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet.TIPOS_PAGORowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet1.PRODUCTOSDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet1.PRODUCTOSRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet1.PRODUCTOSRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet1.PRODUCTOSRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet10.SP_ListarProductosDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet10.SP_ListarProductosRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet10.SP_ListarProductosRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet10.SP_ListarProductosRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet11.SP_ObtenerSaldoFarmaciaDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet11.SP_ObtenerSaldoFarmaciaRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet11.SP_ObtenerSaldoFarmaciaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet11.SP_ObtenerSaldoFarmaciaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet12.CAJADataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet12.CAJARow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet12.CAJARowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet12.CAJARowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet12.PRODUCTOSDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet12.PRODUCTOSRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet12.PRODUCTOSRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet12.PRODUCTOSRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet13.CAJADataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet13.CAJARow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet13.CAJARowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet13.CAJARowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet13.PRODUCTOSDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet13.PRODUCTOSRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet13.PRODUCTOSRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet13.PRODUCTOSRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet14.SP_ListarProductosDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet14.SP_ListarProductosRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet14.SP_ListarProductosRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet14.SP_ListarProductosRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet15.SP_ListarProductosDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet15.SP_ListarProductosRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet15.SP_ListarProductosRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet15.SP_ListarProductosRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet2.CAJADataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet2.CAJARow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet2.CAJARowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet2.CAJARowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet3.COMPRAS_SUPLIDORESDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet3.COMPRAS_SUPLIDORESRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet3.COMPRAS_SUPLIDORESRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet3.COMPRAS_SUPLIDORESRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet4.GERENTEDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet4.GERENTERow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet4.GERENTERowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet4.GERENTERowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet5.SP_VerMovimientoDinero_BalanceNetoDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet5.SP_VerMovimientoDinero_BalanceNetoRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet5.SP_VerMovimientoDinero_BalanceNetoRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet5.SP_VerMovimientoDinero_BalanceNetoRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet6.PRODUCTOSDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet6.PRODUCTOSRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet6.PRODUCTOSRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet6.PRODUCTOSRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet7.COMPRAS_SUPLIDORESDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet7.COMPRAS_SUPLIDORESRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet7.COMPRAS_SUPLIDORESRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet7.COMPRAS_SUPLIDORESRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet8.SP_ListarProductosDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet8.SP_ListarProductosRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet8.SP_ListarProductosRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet8.SP_ListarProductosRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet9.SP_ListarProductosDataTable.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet9.SP_ListarProductosRow.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet9.SP_ListarProductosRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\FARMACIA1DataSet9.SP_ListarProductosRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Gerente.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
